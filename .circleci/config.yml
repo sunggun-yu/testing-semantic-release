@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   build-release:
-    machine:
-      image: ubuntu-1604:201903-01
+    docker:
+      - image: circleci/node:8
     steps:
       - checkout
       - run:
