@@ -19,11 +19,14 @@ jobs:
           name: "prepare the release"
           command: "npx semantic-release --prepare"
       - run:
-          name: "semantic-release"
+          name: "test"
           command: "echo ${NEXT_RELEASE_VERSION}"
       - run:
           name: "publish"
-          command: "npx semantic-release --publish"
+          command: "npx semantic-release"
+      - run:
+          name: "test"
+          command: "echo ${NEXT_RELEASE_VERSION}"
 
 workflows:
   version: 2
