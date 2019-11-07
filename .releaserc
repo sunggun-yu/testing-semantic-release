@@ -15,7 +15,8 @@
             {
                 "verifyConditionsCmd": "echo ${options.branch}",
                 "prepareCmd": ".circleci/prepare-release.sh ${nextRelease.version}",
-                "publishCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
+                "publishCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
+                "successCmd": "echo releases - ${releases} && echo nextRelease - ${nextRelease}"
             }
         ],
         [

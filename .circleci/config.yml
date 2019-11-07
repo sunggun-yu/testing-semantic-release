@@ -21,6 +21,14 @@ jobs:
       - run:
           name: "test"
           command: "echo ${NEXT_RELEASE_VERSION}"
+  check:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout
+      - run:
+          name: "test"
+          command: "echo ${NEXT_RELEASE_VERSION}"
 
 workflows:
   version: 2
@@ -28,3 +36,7 @@ workflows:
     jobs:
       - build-release:
           context: test
+      - check:
+          context: test
+          requires:
+            - build-release
