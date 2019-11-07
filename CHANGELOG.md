@@ -28,6 +28,13 @@
 
 * test ([#1](https://github.com/sunggun-yu/testing-semantic-release/issues/1)) ([ce91c87](https://github.com/sunggun-yu/testing-semantic-release/commit/ce91c87da69499b4d3e61a986d738d8f9390a7f8))
 
+# [1.1.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.0.1...v1.1.0) (2019-11-07)
+
+
+### Features
+
+* test ([#1](https://github.com/sunggun-yu/testing-semantic-release/issues/1)) ([ce91c87](https://github.com/sunggun-yu/testing-semantic-release/commit/ce91c87da69499b4d3e61a986d738d8f9390a7f8))
+
 # 1.0.0 (2019-11-07)
 
 
