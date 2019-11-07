@@ -1,0 +1,27 @@
+version: 2.1
+
+jobs:
+  build-release:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout
+      - run:
+          name: install semantic-release
+          command: |
+            npm install -g semantic-release           \
+            @semantic-release/changelog               \
+            @semantic-release/commit-analyzer         \
+            @semantic-release/exec                    \
+            @semantic-release/git                     \
+            @semantic-release/release-notes-generator
+      - run:
+          name: "semantic-release"
+          command: "npx semantic-release"
+
+workflows:
+  version: 2
+  build-release:
+    jobs:
+      - build-release:
+          context: test
