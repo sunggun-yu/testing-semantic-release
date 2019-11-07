@@ -16,12 +16,6 @@ jobs:
             @semantic-release/git                     \
             @semantic-release/release-notes-generator
       - run:
-          name: "prepare the release"
-          command: "npx semantic-release --prepare"
-      - run:
-          name: "test"
-          command: "echo ${NEXT_RELEASE_VERSION}"
-      - run:
           name: "publish"
           command: "npx semantic-release"
       - run:
