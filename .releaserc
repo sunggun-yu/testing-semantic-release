@@ -13,7 +13,9 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+                "verifyConditionsCmd": "echo ${options.branch}",
+                "prepareCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
+                "publishCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
             }
         ],
         [
