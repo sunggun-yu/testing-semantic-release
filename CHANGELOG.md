@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.1](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.2.0...v1.2.1) (2019-11-08)
+
+
+### Bug Fixes
+
+* fix test2 ([d86b703](https://github.com/sunggun-yu/testing-semantic-release/commit/d86b70351e052b73cc121a265a90147a81cbd72b))
+
 # [1.2.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.1.0...v1.2.0) (2019-11-07)
 
 
