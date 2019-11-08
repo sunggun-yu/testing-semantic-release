@@ -28,7 +28,7 @@ jobs:
       - checkout
       - run:
           name: "test"
-          command: "echo ${NEXT_RELEASE_VERSION}"
+          command: "git describe --tags --abbrev=0"
 
 workflows:
   version: 2
