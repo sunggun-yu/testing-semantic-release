@@ -1,5 +1,22 @@
 # Changelog
 
+# [2.0.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.4.0...v2.0.0) (2019-11-11)
+
+
+### Features
+
+* adding test3 ([414721d](https://github.com/sunggun-yu/testing-semantic-release/commit/414721dd1d84ea692aad47dad2d719b26b2fd613))
+
+
+### Performance Improvements
+
+* test mojor ([387632b](https://github.com/sunggun-yu/testing-semantic-release/commit/387632b94b1a7bbfa155dfc7bce4ab1ced6b04f1))
+
+
+### BREAKING CHANGES
+
+* test major
+
 # [1.4.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.12...v1.4.0) (2019-11-11)
 
 
