@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.12](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.11...v1.3.12) (2019-11-11)
+
+
+### Bug Fixes
+
+* remove file ([bdf336f](https://github.com/sunggun-yu/testing-semantic-release/commit/bdf336f90f96944c3682ec0f0e447e5c10276635))
+
 ## [1.3.11](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.10...v1.3.11) (2019-11-11)
 
 
