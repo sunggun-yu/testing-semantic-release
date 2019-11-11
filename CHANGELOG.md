@@ -1,5 +1,12 @@
 # Changelog
 
+# [2.2.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v2.1.0...v2.2.0) (2019-11-11)
+
+
+### Features
+
+* **cci:** update cci conditions ([29a21e1](https://github.com/sunggun-yu/testing-semantic-release/commit/29a21e13f9883eb39c05f39db8364c616e61a5c2))
+
 # [2.1.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v2.0.0...v2.1.0) (2019-11-11)
 
 
