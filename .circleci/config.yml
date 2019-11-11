@@ -18,17 +18,25 @@ jobs:
       - run:
           name: "publish"
           command: "npx semantic-release"
-      - run:
-          name: "test"
-          command: "echo ${NEXT_RELEASE_VERSION}"
+      - run: git describe --tags --abbrev=0
+      - persist_to_workspace:
+            root: .
+            paths:
+              - release.version
+
   check:
     machine:
       image: ubuntu-1604:201903-01
     steps:
       - checkout
+      - run: git describe --tags --abbrev=0
+      - run: git pull origin master
+      - run: git describe --tags --abbrev=0
+      - attach_workspace:
+          at: /tmp/workspace
       - run:
           name: "test"
-          command: "git describe --tags --abbrev=0"
+          command: "cat /tmp/workspace/release.version"
 
 workflows:
   version: 2
