@@ -7,6 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: create empty release version file
+          command: |
+            echo -n "" > release.version
+      - run:
           name: install semantic-release
           command: |
             sudo npm install -g semantic-release      \
