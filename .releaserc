@@ -16,7 +16,7 @@
                 "verifyConditionsCmd": "echo ${options.branch}",
                 "prepareCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
                 "publishCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
-                "successCmd": "echo '${JSON.stringify(releases)}' && echo ${nextRelease.version}"
+                "successCmd": "echo '${JSON.stringify(releases)}' && echo ${JSON.stringify(nextRelease)} > release.json"
             }
         ],
         [
