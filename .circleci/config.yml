@@ -30,6 +30,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: /tmp/workspace
+      - run: ls -la
       - run:
           name: "test"
           command: "cat /tmp/workspace/release.version"
