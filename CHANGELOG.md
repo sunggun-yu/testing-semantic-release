@@ -1,5 +1,13 @@
 # Changelog
 
+# [2.1.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v2.0.0...v2.1.0) (2019-11-11)
+
+
+### Features
+
+* skipping cci step if no release ([6bd3475](https://github.com/sunggun-yu/testing-semantic-release/commit/6bd347569cf19d324e73cb1b30787dad2b6cc9dd))
+* test if it overwrite the version file ([5e4df2b](https://github.com/sunggun-yu/testing-semantic-release/commit/5e4df2b6aae450026fd95088d6aa13e511a98d56))
+
 # [2.0.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.4.0...v2.0.0) (2019-11-11)
 
 
