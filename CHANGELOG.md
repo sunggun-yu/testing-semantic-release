@@ -1,5 +1,12 @@
 # Changelog
 
+# [2.3.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v2.2.0...v2.3.0) (2019-11-11)
+
+
+### Features
+
+* use default of @semantic-release/github ([b0d07b8](https://github.com/sunggun-yu/testing-semantic-release/commit/b0d07b8ea99d958e2a6c43529a18f6655cd050b2))
+
 # [2.2.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v2.1.0...v2.2.0) (2019-11-11)
 
 
