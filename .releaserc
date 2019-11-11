@@ -14,9 +14,9 @@
             "@semantic-release/exec",
             {
                 "verifyConditionsCmd": "echo ${options.branch}",
-                "prepareCmd": ".circleci/prepare-release.sh ${nextRelease.version}",
+                "prepareCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
                 "publishCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
-                "successCmd": "echo releases - ${JSON.stringify(releases)} && echo nextRelease - ${JSON.stringify(nextRelease)}"
+                "successCmd": "echo ${JSON.stringify(releases[0])} > test.json"
             }
         ],
         [
