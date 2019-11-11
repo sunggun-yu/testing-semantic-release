@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.5](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.4...v1.3.5) (2019-11-11)
+
+
+### Bug Fixes
+
+* releaserc ([85711e5](https://github.com/sunggun-yu/testing-semantic-release/commit/85711e579212fe3798376d0a83a78c49b1163c03))
+
 ## [1.3.4](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.3...v1.3.4) (2019-11-11)
 
 
