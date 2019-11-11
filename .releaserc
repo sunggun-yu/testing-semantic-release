@@ -13,7 +13,7 @@
         [
             "@semantic-release/exec",
             {
-                "successCmd": "echo ${JSON.stringify(nextRelease)} > release.json"
+                "successCmd": "echo ${JSON.stringify(nextRelease.version)} > release.version"
             }
         ],
         [
