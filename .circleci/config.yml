@@ -1,7 +1,40 @@
 version: 2.1
 
 jobs:
-  build-release:
+  verify-release:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run:
+          name: install semantic-release
+          command: |
+            sudo npm install -g semantic-release      \
+            @semantic-release/changelog               \
+            @semantic-release/commit-analyzer         \
+            @semantic-release/exec                    \
+            @semantic-release/git                     \
+            @semantic-release/release-notes-generator
+      - run:
+          name: "Dry run the semantic-release to get next version"
+          command: "npx semantic-release --dry-run"
+      - persist_to_workspace:
+            root: .
+            paths:
+              - release.version
+
+  release-artifact:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: "test"
+          command: "cat /tmp/workspace/release.version"
+
+  publish-release:
     docker:
       - image: circleci/node:8
     steps:
@@ -18,33 +51,19 @@ jobs:
       - run:
           name: "publish"
           command: "npx semantic-release"
-      - run: git describe --tags --abbrev=0
-      - persist_to_workspace:
-            root: .
-            paths:
-              - release.version
-
-  check:
-    machine:
-      image: ubuntu-1604:201903-01
-    steps:
-      - checkout
-      - run: git describe --tags --abbrev=0
-      - run: git pull origin master
-      - run: git describe --tags --abbrev=0
-      - attach_workspace:
-          at: /tmp/workspace
-      - run:
-          name: "test"
-          command: "cat /tmp/workspace/release.version"
 
 workflows:
   version: 2
   build-release:
     jobs:
-      - build-release:
+      - verify-release:
           context: test
-      - check:
+      - release-artifact:
           context: test
           requires:
-            - build-release
+            - verify-release
+      - publish-release:
+          context: test
+          requires:
+            - verify-release
+            - release-artifact
