@@ -13,10 +13,7 @@
         [
             "@semantic-release/exec",
             {
-                "verifyConditionsCmd": "echo ${options.branch}",
-                "prepareCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
-                "publishCmd": "echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}",
-                "successCmd": "echo ${JSON.stringify(nextRelease)} > release.json"
+                "successCmd": "echo ${nextRelease.version} > release.json"
             }
         ],
         [
