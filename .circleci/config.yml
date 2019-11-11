@@ -31,12 +31,17 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - run: ls -la
-      - run: |
-          if [[ ! -f "/tmp/workspace/release.version" || ! -s "/tmp/workspace/release.version" ]]; then 
+      - run:
+          name: Check if next release version is existing. if not halt next steps
+          command: |
+            if [[ -f "/tmp/workspace/release.version" && -s "/tmp/workspace/release.version" ]];
+            then
+              echo "There is next release version $(cat /tmp/workspace/release.version)"
+            else
               echo "Nothing to release"
-              echo "Skip release artifact"
+              echo "Skip next steps"
               circleci-agent step halt
-          fi
+            fi
       - run:
           name: "test"
           command: "cat /tmp/workspace/release.version"
