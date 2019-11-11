@@ -19,9 +19,9 @@ jobs:
           name: "Dry run the semantic-release to get next version"
           command: "npx semantic-release --dry-run"
       - persist_to_workspace:
-            root: .
+            root: /tmp/release
             paths:
-              - release.version
+              - .
 
   release-artifact:
     machine:

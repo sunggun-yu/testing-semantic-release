@@ -13,7 +13,7 @@
         [
             "@semantic-release/exec",
             {
-                "verifyReleaseCmd": "echo ${nextRelease.version} > release.version"
+                "verifyReleaseCmd": "mkdir -p /tmp/release && echo ${nextRelease.version} > /tmp/release/release.version"
             }
         ],
         [
