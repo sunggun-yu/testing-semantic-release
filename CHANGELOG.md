@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.4.0](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.12...v1.4.0) (2019-11-11)
+
+
+### Features
+
+* update cci config ([93be91f](https://github.com/sunggun-yu/testing-semantic-release/commit/93be91fe54766dba684ad6f595a8ed4f2141c2ee))
+
 ## [1.3.12](https://github.com/sunggun-yu/testing-semantic-release/compare/v1.3.11...v1.3.12) (2019-11-11)
 
 
