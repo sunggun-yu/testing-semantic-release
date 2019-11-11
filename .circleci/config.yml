@@ -31,6 +31,12 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - run: ls -la
+      - run: |
+          if [[ ! -f "/tmp/workspace/release.version" || ! -s "/tmp/workspace/release.version" ]]; then 
+              echo "Nothing to release"
+              echo "Skip release artifact"
+              circleci-agent step halt
+          fi
       - run:
           name: "test"
           command: "cat /tmp/workspace/release.version"

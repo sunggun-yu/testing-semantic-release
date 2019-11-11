@@ -13,7 +13,6 @@
         [
             "@semantic-release/exec",
             {
-                "analyzeCommitsCmd":"echo ${lastRelease.version} > release.version",
                 "verifyReleaseCmd": "echo ${nextRelease.version} > release.version"
             }
         ],
