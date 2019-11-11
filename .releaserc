@@ -13,7 +13,8 @@
         [
             "@semantic-release/exec",
             {
-                "verifyReleaseCmd": "touch release.version && echo ${nextRelease.version} > release.version"
+                "verifyConditionsCmd":"touch release.version",
+                "verifyReleaseCmd": "echo ${nextRelease.version} > release.version"
             }
         ],
         [
